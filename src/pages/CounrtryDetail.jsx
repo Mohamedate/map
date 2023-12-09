@@ -4,6 +4,7 @@ import Container from "../ui/Container";
 import Spinner from "../ui/Spinner";
 import Map from "../ui/Map";
 import InfoCountry from "../components/InfoCountry";
+import Army from "../ui/Army";
 export default function CounrtryDetail() {
   const { data: country, isLoading, isError, error } = useGetCountry();
   if (isLoading) return <Spinner />;
@@ -22,6 +23,7 @@ export default function CounrtryDetail() {
     languages,
     borders,
     latlng,
+    coatOfArms,
   } = country.at(0);
 
   let currency = "",
@@ -57,6 +59,7 @@ export default function CounrtryDetail() {
         alt={alt}
       />
       <Map latlng={latlng} name={name} />
+      {coatOfArms && <Army coatOfArms={coatOfArms} />}
     </Container>
   );
 }

@@ -11,7 +11,7 @@ export default function Countries() {
 
   return (
     <div className=" grid grid-cols-our-grid justify-center gap-8 pb-20 md:justify-between">
-      {countries.map((country,i) => (
+      {countries.map((country, i) => (
         <Country key={country.cca3} country={country} index={i} />
       ))}
     </div>

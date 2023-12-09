@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
 let del = 0;
 export const countryAnim = {
   initial: {
@@ -29,17 +30,17 @@ export default function Country({ country, index }) {
     capital,
   } = country;
 
+  if (cca3 === "ISR") return null;
   return (
     <motion.div
       variants={countryAnim}
       whileInView="enter"
       initial="initial"
       viewport={{ once: true }}
-      // animate="enter"
       custom={index}
     >
       <Link to={`/detail/${cca3}`} id={cca3}>
-        <div className=" h-full cursor-pointer overflow-hidden rounded-md shadow-md hover:shadow-lg dark:bg-dBlued dark:text-vLGrayL dark:shadow-2xl">
+        <div className=" h-full cursor-pointer overflow-hidden rounded-md shadow-md transition-transform duration-300 hover:translate-y-[-12px]  hover:shadow-lg dark:bg-dBlued dark:text-vLGrayL dark:shadow-2xl">
           <img className=" h-48 w-full" src={flag} alt="country" />
           <p className="px-6 py-6 text-xl font-bold">{name}</p>
           <div className="flex flex-col gap-1 px-6 pb-10">

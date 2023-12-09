@@ -1,5 +1,5 @@
 export default function ErrorConnect({ error }) {
-  const notFound = error.message === "Not Found";
+  const notFound = error?.message === "Not Found";
 
   return (
     <div className="h-full pt-20">
@@ -11,7 +11,7 @@ export default function ErrorConnect({ error }) {
         />
       </div>
       <p className=" mt-3 text-center font-semibold dark:text-vLGrayL ">
-        {notFound ? "No Country Found" : "Check From Connection"}
+        {notFound ? "Country Not Found" : "Check From Connection"}
       </p>
     </div>
   );
