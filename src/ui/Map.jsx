@@ -18,7 +18,7 @@ export default function Map({ latlng, name }) {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={latlng}>
-            <Popup autoPan={true}>{name}</Popup>
+            <Popup>{name}</Popup>
           </Marker>
         </MapContainer>
       </div>
