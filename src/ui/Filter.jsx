@@ -59,7 +59,7 @@ export default function Filter() {
                 custom={i}
                 key={i}
                 onClick={() => handleMenuFilter(continent)}
-                className=" cursor-pointer hover:text-dBlued"
+                className=" cursor-pointer hover:text-dBlued dark:hover:text-vLGrayL"
               >
                 {continent}
               </motion.li>

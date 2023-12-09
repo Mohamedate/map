@@ -3,10 +3,10 @@ import Border from "./Border";
 export default function InfoCountry({ flag, name, detail, borders, alt }) {
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="md:basis-1/2">
+      <div className="md:basis-2/5">
         <img className="h-full w-full" src={flag} alt={alt} />
       </div>
-      <div className="flex flex-col justify-evenly py-10 md:basis-1/2 lg:py-0 lg:pl-20">
+      <div className="flex flex-col justify-evenly py-10 dark:text-vLGrayL md:basis-3/5 lg:py-0 lg:pl-20">
         <h1 className="mb-5 text-2xl font-extrabold md:mb-0">{name}</h1>
         <div className="grid gap-2 md:grid-cols-2">
           {detail.map((item, i) => (

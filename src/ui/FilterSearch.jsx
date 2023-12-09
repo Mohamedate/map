@@ -1,11 +1,7 @@
-import { useCountry } from "../context/CountryContext";
-
 import Filter from "./Filter";
 import Search from "./Search";
 
 export default function FilterSearch() {
-  // const { isError } = useCountry();
-
   return (
     <div className="flex flex-col flex-wrap justify-between gap-5 py-10 md:flex-row">
       <Search />
