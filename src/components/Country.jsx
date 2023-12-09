@@ -1,25 +1,5 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-let del = 0;
-export const countryAnim = {
-  initial: {
-    opacity: 0,
-    y: 30,
-  },
-  enter: (i) => {
-    if (del > 3) del = 0;
-    else del += 1;
-    return {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        delay: del * 0.1,
-      },
-    };
-  },
-};
+import CountryAnim from "../ui/CountryAnim";
 export default function Country({ country, index }) {
   const {
     cca3,
@@ -32,13 +12,7 @@ export default function Country({ country, index }) {
 
   if (cca3 === "ISR") return null;
   return (
-    <motion.div
-      variants={countryAnim}
-      whileInView="enter"
-      initial="initial"
-      viewport={{ once: true }}
-      custom={index}
-    >
+    <CountryAnim index={index}>
       <Link to={`/detail/${cca3}`} id={cca3}>
         <div className=" h-full cursor-pointer overflow-hidden rounded-md shadow-md transition-transform duration-300 hover:translate-y-[-12px]  hover:shadow-lg dark:bg-dBlued dark:text-vLGrayL dark:shadow-2xl">
           <img className=" h-48 w-full" src={flag} alt="country" />
@@ -57,6 +31,6 @@ export default function Country({ country, index }) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </CountryAnim>
   );
 }

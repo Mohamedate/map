@@ -8,12 +8,10 @@ const continents = ["All", "Africa", "America", "Asia", "Europe", "Oceania"];
 
 export default function Filter() {
   const [params, setParams] = useSearchParams();
-
   const { region, showMenu, dispatch } = useCountry();
 
   function handleMenuFilter(continent) {
     dispatch({ type: "setRegion", payload: continent });
-    dispatch({ type: "resetEnd" });
     if (continent === "All") {
       params?.delete("region");
     } else {

@@ -22,12 +22,7 @@ function reducer(state, { type, payload }) {
       return { ...state, region: "", showMenu: false };
     case "closeOpenMenu":
       return { ...state, showMenu: !state.showMenu };
-    case "increaseEnd":
-      if (payload - state.end <= 8)
-        return { ...state, end: payload + payload - state.end };
-      else return { ...state, end: state.end + 8 };
-    case "resetEnd":
-      return { ...state, end: 8 };
+
     default:
       throw new Error("error");
   }

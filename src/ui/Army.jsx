@@ -5,7 +5,7 @@ export default function Army({ coatOfArms }) {
   return (
     <Container classes=" mt-20 md:mt-40">
       <p className="mb-8 flex items-center justify-center gap-2 text-3xl font-semibold dark:text-vLGrayL md:mb-10 md:text-6xl">
-        <MdMilitaryTech className=" text-4xl" />
+        <MdMilitaryTech className=" text-4xl md:text-8xl" />
         Coat Of Arms
       </p>
       <div className=" m-auto grid max-w-xl place-content-center">

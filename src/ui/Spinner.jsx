@@ -1,5 +1,3 @@
-//
-
 export default function Spinner() {
   return (
     <div className=" fixed left-0 top-0 z-30 grid h-full w-full place-content-center bg-white/30 backdrop-blur-sm dark:bg-dBlued ">

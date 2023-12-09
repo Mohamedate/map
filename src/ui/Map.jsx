@@ -16,6 +16,7 @@ export default function Map({ latlng, name }) {
         <FaMapMarkedAlt className=" text-blue-500" />
         {name}
       </p>
+
       <div className={styles.mapContainer}>
         <MapContainer className={styles.map} center={position} zoom={5}>
           <TileLayer

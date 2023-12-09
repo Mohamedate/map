@@ -1,10 +1,8 @@
 import { IoMdSearch } from "react-icons/io";
-
 import Debounce from "./Debounce";
 import { useCountry } from "../context/CountryContext";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-
 export default function Search() {
   const [param] = useSearchParams();
   const { search, dispatch } = useCountry();

@@ -20,12 +20,11 @@
 :global(.leaflet-popup .leaflet-popup-content-wrapper) {
   background-color: white;
   color: #343333;
-  border-radius: 5px;
-  padding-right: 0.6rem;
+  font-weight: 600;
 }
 
 :global(.leaflet-popup .leaflet-popup-content) {
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -37,7 +36,7 @@
 }
 
 :global(.leaflet-popup .leaflet-popup-tip) {
-  background-color: #343333;
+  background-color: white;
 }
 
 :global(.leaflet-popup-content-wrapper) {
