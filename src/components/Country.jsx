@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CountryAnim from "../ui/CountryAnim";
+
 export default function Country({ country, index }) {
   const {
     cca3,
@@ -11,6 +12,8 @@ export default function Country({ country, index }) {
   } = country;
 
   if (cca3 === "ISR") return null;
+
+
   return (
     <CountryAnim index={index}>
       <Link to={`/detail/${cca3}`} id={cca3}>

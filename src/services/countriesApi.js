@@ -7,7 +7,7 @@ export async function getAllCountriesApi({ searchCountry, region }) {
   } else if (region) {
     req += `region/${region}`;
   } else {
-    req += "/all";
+    req += "all";
   }
 
   const res = await fetch(req);
